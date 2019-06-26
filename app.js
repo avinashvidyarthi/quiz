@@ -151,7 +151,7 @@ app.post('/api/evaluate', (req, res, next) => {
                 from: 'avinashvidyarthi',
                 to: req.body.stud.email,
                 subject: 'Result',
-                html: "Dear <b>" + req.body.stud.name + "</b>" + "<br> Your results are: <br>Correct: "+correct+"<br>Incorrect: "+incorrect+"<br>Unattempted: "+unattempt
+                html: "Dear <b>" + req.body.stud.name + "</b>" + "<br> Your results for Quiz: "+result.title+" are: <br>Correct: "+correct+"<br>Incorrect: "+incorrect+"<br>Unattempted: "+unattempt
             };
             transporter.sendMail(mailOptions, function (error, info) {
                 if (error) {
